@@ -1,0 +1,502 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Estilos do Corpo */
+body {
+    background: linear-gradient(180deg, #6c13e9, #18082F);
+    height: 100vh;
+    width: 90vw;
+}
+
+/* Estilos das Imagens Vetoriais */
+.vetor {
+    position: fixed;
+    left: 0%;
+    top: 0%; 
+    z-index: 0;
+}
+
+/* Animação da Primeira Imagem */
+.One {
+    animation: SlideLeft 28s infinite alternate;
+}
+
+/* Animação da Segunda Imagem */
+.Two {
+    animation: SlideRigth 28s infinite alternate;
+    transform: translateX(-30.8%);
+}
+
+/* Animação da Terceira Imagem */
+.Three {
+    animation: SlideLeft 28s infinite alternate;
+}
+/* Container Principal */
+.main-content {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+/* PRIMEIRA TELA */
+
+/* Estilos da Seção de Busca do Repositório */
+.repository-section {
+    z-index: 1;
+    height: 99vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: SlideBottom .8s forwards;
+}
+
+.hidden-section {
+    animation: SlideTop 1.2s forwards;
+}
+
+/* Estilos do Ícone do GitHub */
+.github-icon {
+    z-index: 1;
+    margin-bottom: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+/* Estilos do Título */
+.github-heading {
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+/* Estilos do Botão de Busca */
+.repository-search {
+    z-index: 1;
+    background-image: url(assets/Icons/search-text.svg);
+    background-repeat: no-repeat;
+    background-size: 59px;
+    background-position: 53%;
+    background-color: #ffffff25;
+    height: 45px;
+    width: 90px;
+    border-radius: 30px;
+    border: #fff 2px solid;
+    transition: .4s;
+}
+
+.repository-search:hover {
+    background-color: #ffffff42;
+    cursor: pointer;
+}
+
+/* Classe para Esconder Elementos */
+.hidden-search {
+    display: none;
+    opacity: 0;
+}
+
+/* Estilos Que Oculta o Input De Busca */
+.invisible {
+    overflow: hidden;
+    z-index: 1;
+    height: 45px;
+    width: 400px;
+    background-color: #ffffffb4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+    padding-right: 9px;
+    border-radius: 30px;
+    border: #fff 2px solid;
+    transition: .4s;
+}
+
+.invisible:hover {
+    background-color: #ffffffb4;
+    cursor: text;
+}
+
+/* Estilos do Input de Busca */
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    padding:2px 8px 4px 30px ;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos do Botão de Busca */
+.search-button {
+    background-image: url(assets/Icons/search-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width:32px;
+    height: 32px;
+    border-radius: 30px;
+    background-color: #161616;
+    padding: 0px 4px 2px 5px;
+    font-size: 18px;
+    border: none;
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+    transition: .6s;
+}
+
+.notFoundDiv {
+    z-index: 2;
+    position: fixed;
+    top: -0.9%;
+    height: 125px;
+    width: 240px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: #ffffff2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    animation: SlideBottom .4s forwards;
+}
+
+.notFoundDiv h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 30px;
+    margin: 12px 0px 6px 0px;
+}
+
+.notFoundDiv button {
+    border-radius: 10px;
+    background-color: #000000c0;
+    border: none;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px 9px 4px 9px;
+    font-size: 18px;
+    box-shadow: 1px 1px 15px #00000065;
+}
+
+.notFoundDiv button:hover {
+    transform: scale(90%);
+    cursor: pointer;
+    background-color: #000000cb;
+}
+
+
+/* SEGUNDA TELA */
+.repository-result {
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.repository-header {
+    background-color: #24064d;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: SlideBottom 1s ease-in-out;
+    padding: 0px 40px;
+}
+
+.repository-header form {
+    background-color: #0707078a;
+    border: #474747 2px solid;
+    height: 40px;
+    width: 300px;
+}
+
+.repository-header form:hover {
+    background-color: #0707078a;
+}
+
+.header-github-img {
+    height: 63px;
+    cursor: pointer;
+}
+
+.header-text{
+    position: fixed;
+    left: 45%;
+    cursor: default;
+    font-size: 27px;
+}
+
+.header-search {
+    z-index: 1;
+    background-image: url(assets/Icons/search-white.svg);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    background-size: 35px;
+    height: 40px !important;
+    width: 40px !important;
+    border: none !important;
+    transition: .4s;
+    background-color: transparent !important;
+   
+}
+
+.header-search:hover {
+    transform: scale(80%);
+    cursor: pointer;
+}
+
+.header-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    padding:4px 5px 4px 25px ;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    opacity: 1;
+    color: #fff;
+}
+
+.header-button {
+    background-image: url(assets/Icons/search-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width:32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+    transition: .6s;
+}
+
+.result-main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoom 1s ease-in-out;
+}
+
+.grid-result {
+    display: grid;
+    grid: 70px 170px 170px/1fr 1fr 270px;
+    width: 990px;
+    height: 480px;
+    margin: 0px 20px;
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.grid-text {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding-left:30px ;
+}
+
+.grid-text h1 {
+    font-size: 30px;
+    overflow: hidden;
+}
+
+.grid-text img {
+    height: 43px;
+    width: 43px;
+    margin: 10px;
+}
+
+.repository-list {
+    background-color: #ffffff77;
+    grid-column: 1/3;
+    grid-row: 2/4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repository-list ul {
+    list-style: none;
+    background-color: transparent;
+    width: 98%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: hiden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.repository-list ul::-webkit-scrollbar {
+    background-color: transparent;
+    width: 15px;
+    height: 1px;
+}
+
+.repository-list ul::-webkit-scrollbar-thumb {
+    background-color: #15151579;
+    border-radius: 30px;
+    height: 2px;
+    cursor: pointer;
+}
+
+.repository-list li {
+    background-color: #ffffff83;
+    margin-bottom: 10px;
+    height: 90px;
+    border-radius: 5px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: #00000052 1px 1px 10px;
+    overflow: hidden;
+}
+
+.repository-list li:hover {
+    background-color: #b8b8b883; 
+}
+
+.repository-list li a{
+    text-decoration: none;
+}
+
+.data {
+    background-color: #ffffff77;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px 55px 0px;
+}
+
+.profile {
+    border: none;
+    background-color: #0000002f;
+    width: 68%;
+    height: 50%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.id {
+    font-size: 25px ;
+    font-weight: 700;
+    height: 30px;
+}
+
+.link {
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+}
+
+.description {
+    font-size: 13px;
+    width: 190px;
+    font-weight: 300;
+    word-break: break-all;
+}
+
+.hidden-result {
+    animation: hiddeResult 1s forwards;
+    position: fixed;
+    z-index: 2;
+    top: 0%;
+}
+
+/* Animação de Deslizamento para a Esquerda */
+@keyframes SlideLeft { 
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-30.8%);
+    }
+}
+
+/* Animação de Deslizamento para a Direita */
+@keyframes SlideRigth { 
+    0% {
+        transform: translateX(-30.8%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* Animação de Deslizamento para a Cima */
+@keyframes SlideTop { 
+    0% {
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes SlideBottom { 
+    0% {
+        transform: translateY(-500px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+}
+
+@keyframes hiddeResult { 
+    0% {
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes zoom { 
+    0% {
+        transform: scale(0%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}

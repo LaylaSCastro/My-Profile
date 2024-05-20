@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fundo da Página -->
+    <div class="background">
+        <!-- Imagens Vetoriais -->
+        <img src="assets/img/vetorOne.svg" class="vetor One" width="2200px"> 
+        <img src="assets/img/vetorTwo.svg" class="vetor Two" width="2200px"> 
+        <img src="assets/img/vetorThree.svg" class="vetor Three" width="2200px">
+    </div>
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Seção de Busca do Repositório -->
+        <section class="repository-section">
+            <!-- Ícone do GitHub -->
+            <img src="assets/Icons/bxl-github.svg" class="github-icon">
+            <!-- Título -->
+            <h2 class="github-heading">Digite o nome do perfil do GitHub</h2>
+            <!-- Formulário de Busca -->
+            <form class="repository-search">
+                <!-- Campo de Busca -->
+                <input required name="input" type="text" class="hidden-search" placeholder="Buscar">
+                <!-- Botão de Busca -->
+                <button class="hidden-search"></button>
+            </form>
+            <div class="not-found"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
