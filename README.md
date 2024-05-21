@@ -29,8 +29,8 @@ O site está hospedado no GitHub Pages e pode ser acessado através do link: [De
 Para visualizar o site localmente, basta clonar este repositório e abrir o arquivo `Index.html` em seu navegador:
 
 ```bash
-git clone https://github.com/LaylaSCastro/Tempfy
-cd Tempfy
+git clone https://github.com/LaylaSCastro/My-Profile
+cd My-Profile
 ```
 
 ## Contribuições 🎉
