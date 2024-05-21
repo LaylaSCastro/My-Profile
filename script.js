@@ -145,9 +145,13 @@ repositorySearch.onsubmit = async(event) =>{
         notFoundDiv.innerHTML = `<h1>Usuário não encontrado!</h1>
                                 <button class="btn">x</button>`
         notFoundDiv.style.display = 'flex'
+        notFoundDiv.style.background = '#ffffff2f'
+        const notFoundContainer = document.querySelector('.not-found-container')
+        notFoundContainer.style.display = 'flex'
         window.addEventListener('click', function (event) {
          if(event.target.classList.contains('btn')) {
             notFoundDiv.style.display = 'none'
+            notFoundContainer.style.display = 'none'
          } 
      });
     } 
@@ -185,24 +189,45 @@ window.addEventListener('click', function (event) {
 
 headerSearch.onsubmit = function(event) {
     event.preventDefault()
+    
     const secondInput = headerSearch.querySelector('input')
     fetch(`https://api.github.com/users/${secondInput.value}`)
     .then((API)=> {return API.json()})
     .then((JsonReturn) => {
-        profile.style.backgroundImage = `url(${JsonReturn.avatar_url})`
-        ID.innerHTML = JsonReturn.name
-        link.innerHTML = JsonReturn.login
-        link.setAttribute("href", JsonReturn.html_url)
-        link.setAttribute("target", "_blank")
-        description.innerHTML = JsonReturn.bio
-    }).catch()
 
-    fetch(`https://api.github.com/users/${secondInput.value}/repos`)
-    .then((API)=> {return API.json()})
-    .then((JsonReturn) => {
-        ul.innerHTML = ''
-        JsonReturn.forEach((repository) => {
-            ul.innerHTML += `<li><a href="${repository.html_url}" target = "_blank">${repository.name}</a></li>`
-        });
-    }).catch()
-}
+        console.log(JsonReturn.message)
+        if(JsonReturn.message === "Not Found"){
+            console.log("nao achei ")
+            const notFoundDiv = document.querySelector('.not-found')
+            notFoundDiv.classList.add('notFoundDiv')
+            notFoundDiv.innerHTML = `<h1>Usuário não encontrado!</h1>
+                                    <button class="btn">x</button>`
+            notFoundDiv.style.display = 'flex'
+            notFoundDiv.style.background = '#827a8e'
+            const notFoundContainer = document.querySelector('.not-found-container')
+            notFoundContainer.style.display = 'flex'
+            window.addEventListener('click', function (event) {
+                if(event.target.classList.contains('btn')) {
+                    notFoundDiv.style.display = 'none'
+                    notFoundContainer.style.display = 'none'
+                } 
+            });
+        }
+        else { 
+            profile.style.backgroundImage = `url(${JsonReturn.avatar_url})`
+            ID.innerHTML = JsonReturn.name
+            link.innerHTML = JsonReturn.login
+            link.setAttribute("href", JsonReturn.html_url)
+            link.setAttribute("target", "_blank")
+            description.innerHTML = JsonReturn.bio
+            
+            fetch(`https://api.github.com/users/${secondInput.value}/repos`)
+            .then((API)=> {return API.json()})
+            .then((JsonReturn) => {
+                ul.innerHTML = ''
+                JsonReturn.forEach((repository) => {
+                    ul.innerHTML += `<li><a href="${repository.html_url}" target = "_blank">${repository.name}</a></li>`
+                })}).catch 
+            }
+        })}
+            

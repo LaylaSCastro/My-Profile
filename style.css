@@ -43,6 +43,7 @@ body {
 .main-content {
     height: 100vh;
     width: 100vw;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -160,9 +161,22 @@ body {
     transition: .6s;
 }
 
+.not-found-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    background-color: #00000080;
+}
+
+/* Estilos do Pop-up de Usuário Não Encontrado */
 .notFoundDiv {
     z-index: 2;
-    position: fixed;
+    position: absolute;
     top: -0.9%;
     height: 125px;
     width: 240px;
@@ -176,8 +190,9 @@ body {
     animation: SlideBottom .4s forwards;
 }
 
+/* Estilos do Botão Close do Pop-up de Usuário Não Encontrado */
 .notFoundDiv h1 {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     font-weight: 400;
     line-height: 30px;
     margin: 12px 0px 6px 0px;
@@ -202,6 +217,8 @@ body {
 
 
 /* SEGUNDA TELA */
+
+/* Estilos do Resultado do Repositório */
 .repository-result {
     position: fixed;
     z-index: 1;
