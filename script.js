@@ -34,7 +34,7 @@ const repositoryHeader = document.createElement('header')
 const gitHubImg = document.createElement('img')
 const headerText = document.createElement('h1')
 const headerSearch = document.createElement('form')
-const headerInput = document.createElement('input')
+const headerInput = document.createElement('input');
 const headerButton = document.createElement('button');
 
 const repositoryMain = document.createElement('main')
