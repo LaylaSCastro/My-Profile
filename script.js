@@ -124,8 +124,8 @@ searchResult = () => {
     fetch(`https://api.github.com/users/${searchInput.value}/repos`)
     .then((API)=> {return API.json()})
     .then((JsonReturn) => {
-        JsonReturn.forEach((repository) => {
             ul.innerHTML = ''
+        JsonReturn.forEach((repository) => {
             ul.innerHTML += `<li><a href="${repository.html_url}" target = "_blank">${repository.name}</a></li>`
         });
     }).catch()
